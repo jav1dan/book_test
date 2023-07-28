@@ -1,0 +1,13 @@
+2023/07/28 02:05:43 [error] 2482427#0: *300 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected ''urlManager'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /var/www/book.javidan.ru/book/backend/config/main.php on line 59" while reading response header from upstream, client: 91.184.253.185, server: admin.book.javidan.ru, request: "GET /index.php?r=site%2Flogin HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "http://admin.book.javidan.ru/index.php?r=site%2Findex"
+2023/07/28 02:05:45 [error] 2482427#0: *300 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected ''urlManager'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /var/www/book.javidan.ru/book/backend/config/main.php on line 59" while reading response header from upstream, client: 91.184.253.185, server: admin.book.javidan.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/28 02:28:30 [error] 2482427#0: *382 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\UnknownPropertyException: Setting unknown property: yii\web\View::i18n in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/Component.php:209
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/BaseYii.php(558): yii\base\Component->__set()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/BaseObject.php(107): yii\BaseYii::configure()
+#2 [internal function]: yii\base\BaseObject->__construct()
+#3 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#4 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#5 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#6 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject()
+#7 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/Module.php(766): yii\di\ServiceLocator->get()" while reading upstream, client: 91.184.253.185, server: admin.book.javidan.ru, request: "GET /site/login HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "http://admin.book.javidan.ru/"

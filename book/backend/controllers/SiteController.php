@@ -83,11 +83,14 @@ class SiteController extends Controller
             return $this->goBack();
         }
 
-        $model->password = '';
 
-        return $this->render('login', [
-            'model' => $model,
-        ]);
+        $model->password = '';
+        $viewData = [
+            'model'=>$model,
+            'title'=>'Вход в админ панель'
+        ];
+
+        return $this->render('login', $viewData);
     }
 
     /**

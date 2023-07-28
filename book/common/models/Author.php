@@ -1,0 +1,66 @@
+<?php
+
+namespace common\models;
+
+use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\db\ActiveRecord;
+//generate model for author with name,surname and fathername
+/**
+ * This is the model class for table "author".
+ *
+ * @property int $id
+ * @property string|null $name
+ * @property string|null $surname
+ * @property string|null $fathername
+ * @property int|null $created_at
+ * @property int|null $updated_at
+ *
+ * @property Book[] $books
+ */
+class Author extends ActiveRecord
+{
+    /**
+     * {@inheritdoc}
+     */
+    public static function tableName()
+    {
+        return 'author';
+    }
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class,
+        ];
+    }
+    /**
+     * {@inheritdoc}
+     */
+    public function rules()
+    {
+        return [
+            [['created_at', 'updated_at'], 'integer'],
+            [['name', 'surname', 'fathername'], 'string', 'max' => 255],
+            [['name', 'surname', 'fathername'], 'required'],
+            [['name', 'surname', 'fathername'], 'trim'],
+            [['name', 'surname', 'fathername'], 'match', 'pattern' => '/^[a-zA-Zа-яА-Я]+$/u', 'message' => 'Only letters allowed'],
+            [['name', 'surname', 'fathername'], 'match', 'pattern' => '/^[a-zA-Zа-яА-Я]{2,}$/u', 'message' => 'Minimum 2 letters']
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function attributeLabels(){
+        return [
+            'id' => Yii::t('app', 'Author ID'),
+            'name' => Yii::t('app', 'Author Name'),
+            'surname' => Yii::t('app','Author Surname'),
+            'fathername' => Yii::t('app','Author Fathername'),
+            'created_at' => Yii::t('app','Created At'),
+            'updated_at' => Yii::t('app','Updated At'),
+        ];
+    }
+    
+            
+}

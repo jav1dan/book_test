@@ -16,6 +16,11 @@ class LoginForm extends Model
 
     private $_user;
 
+    public function attributeLabels(){
+        return [
+            'username'=>Yii::t('backend','username')
+        ];
+    }
 
     /**
      * {@inheritdoc}

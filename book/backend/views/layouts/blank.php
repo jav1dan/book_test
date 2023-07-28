@@ -18,15 +18,21 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100 bg-primary">
 <?php $this->beginBody() ?>
 
 <main role="main">
-    <div class="container">
-        <?= $content ?>
-    </div>
+    <?= $content ?>
 </main>
-
+<footer class="py-4 bg-light mt-auto">
+    <div class="container-fluid px-4">
+        <div class="d-flex align-items-center justify-content-between small">
+            <div class="text-muted">&copy; <?=Yii::t('backend','Book.JAVIDAN');?></div>
+            <div>
+            </div>
+        </div>
+    </div>
+</footer>
 <?php $this->endBody() ?>
 </body>
 </html>
