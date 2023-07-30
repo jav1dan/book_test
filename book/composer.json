@@ -18,7 +18,12 @@
         "yiisoft/yii2": "~2.0.45",
         "yiisoft/yii2-bootstrap5": "~2.0.2",
         "yiisoft/yii2-symfonymailer": "~2.0.3",
-        "yiisoft/yii2-twig": "^2.0"
+        "yiisoft/yii2-twig": "^2.0",
+        "voskobovich/yii2-many-many-behavior": "~3.0",
+        "artkost/yii2-trumbowyg": "@stable",
+        "perminder-klair/yii2-dropzone": "dev-master",
+        "yiisoft/yii2-imagine": "^2.3",
+        "sadovojav/yii2-image-thumbnail": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

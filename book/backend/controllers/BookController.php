@@ -100,7 +100,7 @@ class BookController extends Controller{
             'scenario'=>Book::SCENARIO_UPDATE,
             'selected_authors'=>$selected_authors
         ];
-        var_dump($templateData)
+        // var_dump($templateData)
         return $this->render('form',$templateData);
     }
 

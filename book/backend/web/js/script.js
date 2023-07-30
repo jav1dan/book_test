@@ -24,3 +24,8 @@ window.logoutFunction = ()=>{
     document.body.append(form);
     form.submit();   
 }
+$(document).ready(function(){
+    $('.main-select select').select2({
+        width: '100%'
+    });
+});

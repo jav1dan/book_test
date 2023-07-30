@@ -5,6 +5,7 @@ namespace common\models;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
+use yii\helpers\ArrayHelper;
 //generate model for author with name,surname and fathername
 /**
  * This is the model class for table "author".
@@ -20,6 +21,8 @@ use yii\db\ActiveRecord;
  */
 class Author extends ActiveRecord
 {
+
+
     /**
      * {@inheritdoc}
      */
@@ -61,6 +64,19 @@ class Author extends ActiveRecord
             'updated_at' => Yii::t('app','Updated At'),
         ];
     }
+
+
+    //listAll Authors with concat of name and surname
+    public static function listAll($keyField = 'id', $valueField = 'name', $asArray = true)
+    {
+        $query = static::find();
+        if ($asArray) {
+                $query->select([$keyField, 'CONCAT(name," ",surname) as name'])->asArray();
+        }
+        $array= ArrayHelper::map($query->all(), $keyField, 'name');
+        return $array;
+    }
+
     
             
 }
