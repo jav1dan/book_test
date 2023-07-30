@@ -10,8 +10,14 @@ return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
-    'bootstrap' => ['log'],
-    'modules' => [],
+    'bootstrap' => ['log','debug'],
+    // 'modules' => [],
+    'modules' => [
+        'debug' => [
+           'class' => 'yii\debug\Module',
+           'allowedIPs' => ['*']
+       ],
+    ],
     'sourceLanguage' => 'en-US',    
     'language'=>'ru-RU',
     'components' => [

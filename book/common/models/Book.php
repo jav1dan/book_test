@@ -1,11 +1,11 @@
 <?php
 namespace common\models;
 use Yii;
+use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use common\models\Author;
 use yii\imagine\Image;
-use arogachev\ManyToMany\behaviors\ManyToManyBehavior;
 
  /**
   * This is the model class for table "book".
@@ -25,16 +25,18 @@ class Book extends ActiveRecord
     const SCENARIO_VIEW = 'view';
     const SCENARIO_UPDATE = 'update';
 
+
     public static function tableName()
     {
         return 'book';
     }
 
-
-    public function getAuthors(){
-        return $this->hasMany(Author::class,['id'=>'author_id'])->viaTable('book_author',['book_id'=>'id']);
+    public function getAuthors()
+    {
+        return $this->hasMany(Author::class, ['id' => 'author_id'])
+            ->viaTable('book_author', ['book_id' => 'id'])
+            ->orderBy('name');
     }
-
 
     public static function listAll($keyField = 'id', $valueField = 'name', $asArray = true)
     {
@@ -46,12 +48,21 @@ class Book extends ActiveRecord
         return ArrayHelper::map($query->all(), $keyField, $valueField);
     }
 
+    public static function primaryKey()
+    {
+        return array('id');
+    }
+
     /**
      * @inheritdoc
      */
     public function behaviors()
     {
         return [
+            'saveRelations' => [
+                'class' => SaveRelationsBehavior::class,
+                'relations' => ['authors'],
+            ],
             TimestampBehavior::class,
         ];
     }
@@ -67,6 +78,15 @@ class Book extends ActiveRecord
             //name letters russian plus space and dash allowed
             [['year'], 'match', 'pattern' => '/^[0-9]{4}$/u', 'message' => 'Only 4 numbers allowed'],
             [['photo'], 'file', 'extensions' => 'jpg, jpeg, png'],
+            [['authors'],function($attribute, $params, $validator){
+                if (empty($this->authors)) {
+                    $this->addError($attribute, 'Authors cannot be blank.');
+                }
+            }],          
+            // [['name', 'isbn', 'photo'], 'trim'],
+            // [['name', 'isbn', 'photo','description'], 'filter', 'filter' => 'strip_tags'],
+            // [['name', 'isbn', 'photo','description'], 'filter', 'filter' => 'htmlentities'],
+            // [['name', 'isbn', 'photo','description'], 'filter', 'filter' => 'htmlspecialchars']
         ];
     }
 
@@ -81,7 +101,8 @@ class Book extends ActiveRecord
             'year' => Yii::t('app', 'Book Year'),
             'photo' => Yii::t('app', 'Book Photo'),
             'created_at' => Yii::t('app', 'Created At'),
-            'updated_at' => Yii::t('app', 'Updated At')
+            'updated_at' => Yii::t('app', 'Updated At'),
+            'authors'=>Yii::t('app', 'Book Authors')    
         ];
     }
 }

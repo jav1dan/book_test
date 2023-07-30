@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
     ]
 ]);?>
 <div class="form-group row align-items-baseline">
-    <?=$form->field($model,'authors[]',[
+    <?=$form->field($model,'authors',[
         'options'=>['class'=>'mb-3 main-select']
     ])->dropDownList(Author::listAll(),[
         'prompt'=>Yii::t('backend','Select Author'),
@@ -97,6 +97,7 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
     <?= Html::submitButton(Yii::t('backend', 'Save'), ['class' => 'btn btn-primary btn-block', 'name' => 'book-button']) ?>
+    <?= Html::a(Yii::t('backend', 'Cancel'), ['index'], ['class' => 'btn btn-secondary btn-block']) ?>
 </div>
 <script>
     function setDefaultPicture(){

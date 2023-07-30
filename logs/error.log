@@ -219,3 +219,216 @@ Previous exception:
 yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 75. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
 Stack trace:
 #0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Respons" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=5 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/31 01:35:59 [error] 2516934#0: *8542 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 79. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 79. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Respons" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/book/index"
+2023/07/31 01:36:03 [error] 2516934#0: *8542 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 79. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 79. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Respons" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/31 01:36:48 [error] 2516934#0: *8542 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 81. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]:" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/book/index"
+2023/07/31 01:36:48 [error] 2516934#0: *8542 FastCGI sent in stderr: "yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 81. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Respons" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/book/index"
+2023/07/31 01:36:51 [error] 2516934#0: *8542 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 81. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]:" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/31 01:36:51 [error] 2516934#0: *8542 FastCGI sent in stderr: "yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 81. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Respons" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/31 01:41:04 [error] 2516932#0: *8588 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 80. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]:" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/book/index"
+2023/07/31 01:41:04 [error] 2516932#0: *8588 FastCGI sent in stderr: "yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 80. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Respons" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/book/index"
+2023/07/31 01:41:06 [error] 2516932#0: *8588 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 80. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]:" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/31 01:41:06 [error] 2516932#0: *8588 FastCGI sent in stderr: "yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 80. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Respons" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/31 01:41:28 [error] 2516932#0: *8588 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 81. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yi" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/31 01:41:28 [error] 2516932#0: *8588 FastCGI sent in stderr: "isoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 81. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Respons" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/31 01:43:17 [error] 2516934#0: *8593 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 81. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yi" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/book/index"
+2023/07/31 01:43:17 [error] 2516934#0: *8593 FastCGI sent in stderr: "isoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 81. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Respons" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/book/index"
+2023/07/31 01:43:19 [error] 2516934#0: *8593 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 81. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yi" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/31 01:43:19 [error] 2516934#0: *8593 FastCGI sent in stderr: "isoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 81. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Respons" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/31 01:49:52 [error] 2516934#0: *8603 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 77. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 77. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Respons" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/book/index"
+2023/07/31 01:49:55 [error] 2516934#0: *8603 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 77. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 77. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Respons" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/31 02:05:30 [error] 2516934#0: *8618 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 74. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 74. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Respons" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/book/index"
+2023/07/31 02:05:32 [error] 2516934#0: *8618 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 74. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 74. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Respons" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/31 02:06:13 [error] 2516934#0: *8618 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 74. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 74. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Respons" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/31 02:07:12 [error] 2516934#0: *8618 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 74. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+ParseError: syntax error, unexpected '(', expecting variable (T_VARIABLE) in /var/www/book.javidan.ru/book/common/models/Author.php:44
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload()
+#1 /var/www/book.javidan.ru/book/backend/views/book/form.php(38): spl_autoload_call()
+#2 /var/www" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=4 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/book/index"
+2023/07/31 03:25:50 [error] 2516934#0: *9006 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 82. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 82. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Respons" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=5 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/book/index"
+2023/07/31 03:25:53 [error] 2516934#0: *9006 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 82. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/BookController.php on line 82. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Respons" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /book/update?id=5 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"

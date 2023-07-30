@@ -62,26 +62,23 @@ class BookController extends Controller{
     */
     public function actionUpdate($id){
         $book = Book::findOne($id);
+        $authors = $book->authors;
         if(!$book){
             Yii::$app->session->setFlash('error',Yii::t('backend','Book not found'));
             return $this->redirect(['book/index']);
         }
         if($book->load(Yii::$app->request->post()) && $book->save()){
             // $book->getManyToManyRelation('authors')->fill();
+            $book->unlinkAll('authors',true);
+            if(isset(Yii::$app->request->post()['Book']['authors']) && is_array(Yii::$app->request->post()['Book']['authors'])){
+                foreach(Yii::$app->request->post()['Book']['authors'] as $author){
+                    $book->link('authors',Author::findOne($author));
+                }
+            }
             Yii::$app->session->setFlash('success',Yii::t('backend', 'Book has been updated'));
             return $this->redirect(['book/index']);
         }
-        $authors = $book->getAuthors();
 
-        $selected_authors = array();
-        // foreach ($authors as $author) {
-        //     if($author != null){
-        //         var_dump($author);
-        //         // $selected_authors[$author->id] = array("selected"=>true);
-        //     }
-
-        //     // $selected_authors[$author->id] = array("selected"=>true);
-        // }
         $thumb = false;
         if($book->photo == null || $book->photo == '' || !file_exists(Yii::getAlias('@frontend/web/uploads/book/'.$book->photo))){
             $thumb = 'default.jpg';
@@ -97,8 +94,7 @@ class BookController extends Controller{
             'model'=>$book,
             'authors'=>$authors,
             'thumb'=>$thumb,
-            'scenario'=>Book::SCENARIO_UPDATE,
-            'selected_authors'=>$selected_authors
+            'scenario'=>Book::SCENARIO_UPDATE
         ];
         // var_dump($templateData)
         return $this->render('form',$templateData);
@@ -111,6 +107,11 @@ class BookController extends Controller{
     public function actionCreate(){
         $book = new Book();
         if($book->load(Yii::$app->request->post()) && $book->save()){
+            // if(isset(Yii::$app->request->post()['Book']['authors']) && is_array(Yii::$app->request->post()['Book']['authors'])){
+            //     foreach(Yii::$app->request->post()['Book']['authors'] as $author){
+            //         $book->link('authors',Author::findOne($author));
+            //     }
+            // }
             Yii::$app->session->setFlash('success',Yii::t('backend', 'Book has been created'));
             return $this->redirect(['book/index']);
         }

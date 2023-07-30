@@ -23,10 +23,11 @@
         "artkost/yii2-trumbowyg": "@stable",
         "perminder-klair/yii2-dropzone": "dev-master",
         "yiisoft/yii2-imagine": "^2.3",
-        "sadovojav/yii2-image-thumbnail": "dev-master"
+        "sadovojav/yii2-image-thumbnail": "dev-master",
+        "yiisoft/yii2-debug": "^2.1",
+        "la-haute-societe/yii2-save-relations-behavior": "*"
     },
     "require-dev": {
-        "yiisoft/yii2-debug": "~2.1.0",
         "yiisoft/yii2-gii": "~2.2.0",
         "yiisoft/yii2-faker": "~2.0.0",
         "phpunit/phpunit": "~9.5.0",

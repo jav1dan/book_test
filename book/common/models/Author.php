@@ -22,6 +22,10 @@ use yii\helpers\ArrayHelper;
 class Author extends ActiveRecord
 {
 
+    public static function primaryKey()
+    {
+        return array('id');
+    }
 
     /**
      * {@inheritdoc}
@@ -35,6 +39,12 @@ class Author extends ActiveRecord
         return [
             TimestampBehavior::class,
         ];
+    }
+
+    public function  getBooks(){
+        return $this->hasMany(Book::class,['id'=>'book_id'])
+            ->viaTable('book_author',['author_id'=>'id'])
+            ->orderBy('name');
     }
     /**
      * {@inheritdoc}
