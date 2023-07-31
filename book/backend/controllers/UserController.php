@@ -36,7 +36,7 @@ class UserController extends Controller{
                         'allow'=>true,
                     ],
                     [
-                        'actions'=>['logout','index'],
+                        'actions'=>['logout','index','create'],
                         'allow'=>true,
                         'roles'=>['@'],
                     ],
@@ -57,5 +57,20 @@ class UserController extends Controller{
                 'class'=>\yii\web\ErrorAction::class,
             ],
         ];
+    }
+
+    /*
+        * Create user action
+    */
+    public function actionCreate(){
+        $user = new User();
+        if($user->load(Yii::$app->request->post()) && $user->save()){
+            Yii::$app->session->setFlash('success',Yii::t('backend', 'User has been created'));
+            return $this->redirect(['user/index']);
+        }
+        $templateData = [
+            'model'=>$user,
+        ];
+        return $this->render('form',$templateData);
     }
 }

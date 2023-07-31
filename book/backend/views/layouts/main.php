@@ -32,6 +32,11 @@ AppAsset::register($this);
         <!-- Navbar-->
         <div class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
         </div>
+        <?php if(Yii::$app->user->isGuest):?>
+            <div class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <?=Html::a(Yii::t('backend','Login'),['/site/login'],['class' => ['btn btn-primary']]);?>
+            </div>
+        <?php else:?>
         <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
@@ -40,6 +45,7 @@ AppAsset::register($this);
                 </ul>
             </li>
         </ul>
+        <?php endif;?>
     </nav>
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
@@ -49,7 +55,7 @@ AppAsset::register($this);
                         <div class="sb-sidenav-menu-heading"><?=Yii::t('backend','Core');?></div>
                         <a class="nav-link" href="/">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            <?=Yii::t('backend','Dashboard');?>
+                            <?=Yii::t('backend','Main Page');?>
                         </a>
                         <div class="sb-sidenav-menu-heading"><?=Yii::t('backend','My Application')?></div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -59,12 +65,18 @@ AppAsset::register($this);
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="/user"><?=Yii::t('backend','Users List');?></a>
-                                <a class="nav-link" href="/user/create"><?=Yii::t('backend','Add User');?></a>
+                                <?php if(!Yii::$app->user->isGuest):?>
+                                     <a class="nav-link" href="/user"><?=Yii::t('backend','Users List');?></a>
+                                    <a class="nav-link" href="/user/create"><?=Yii::t('backend','Add User');?></a>
+                                <?php endif;?>
                                 <a class="nav-link" href="/book"><?=Yii::t('backend','Books List');?></a>
-                                <a class="nav-link" href="/book/create"><?=Yii::t('backend','Add Book');?></a>
+                                <?php if(!Yii::$app->user->isGuest):?>
+                                    <a class="nav-link" href="/book/create"><?=Yii::t('backend','Add Book');?></a>
+                                <?php endif;?>
                                 <a class="nav-link" href="/author"><?=Yii::t('backend','Authors List');?></a>
-                                <a class="nav-link" href="/author/create"><?=Yii::t('backend','Add Author');?></a>
+                                <?php if(!Yii::$app->user->isGuest):?>
+                                    <a class="nav-link" href="/author/create"><?=Yii::t('backend','Add Author');?></a>
+                                <?php endif;?>
                             </nav>
                         </div>      
                         <a class="nav-link" href="/report/top10">
@@ -73,10 +85,16 @@ AppAsset::register($this);
                         </a>
                     </div>
                 </div>
+                <?php if(!Yii::$app->user->isGuest):?>
                 <div class="sb-sidenav-footer">
-                    <div class="small">Logged in as:</div>
+                    <div class="small"><?=Yii::t('backend','logged_in')?></div>
                     <?=Yii::$app->user->identity->username;?>
                 </div>
+                <?php else:?>
+                    <div class="sb-sidenav-footer">
+                        <div class="small"><?=Yii::t('backend','Welcome, stranger')?></div>
+                    </div>  
+                <?php endif;?>
             </nav>
         </div>
         <div id="layoutSidenav_content">

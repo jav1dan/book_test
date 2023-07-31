@@ -7,9 +7,11 @@ use yii\helpers\Html;
 $this->title = Yii::t('backend','Books List');
 ?>
 <div class="site-index">
+    <?php if(!Yii::$app->user->isGuest): ?>
     <div class="d-flex justify-content-end">    
         <?= Html::a(Yii::t('backend','Create Book'), ['create'], ['class' => 'btn btn-success']) ?>
     </div>
+    <?php endif; ?>
     <div class="body-content">
         <?= ListView::widget([
             'dataProvider' => $dataProvider,

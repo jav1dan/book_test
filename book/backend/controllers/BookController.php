@@ -10,6 +10,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\Response;
 use yii\imagine\Image;   
+use yii\filters\AccessControl;
 
 class BookController extends Controller{
 
@@ -18,6 +19,20 @@ class BookController extends Controller{
     */
     public function behaviors(){
         return [
+            'access'=>[
+                'class'=>AccessControl::class,
+                'rules'=>[
+                    [
+                        'actions'=>['index','view','error'],
+                        'allow'=>true,
+                    ],
+                    [
+                        'actions'=>['create','update','delete','upload'],
+                        'allow'=>true,
+                        'roles'=>['@'],
+                    ],
+                ],
+            ],
             'verbs'=>[
                 'class'=>VerbFilter::class,
                 'actions'=>[
@@ -107,11 +122,6 @@ class BookController extends Controller{
     public function actionCreate(){
         $book = new Book();
         if($book->load(Yii::$app->request->post()) && $book->save()){
-            // if(isset(Yii::$app->request->post()['Book']['authors']) && is_array(Yii::$app->request->post()['Book']['authors'])){
-            //     foreach(Yii::$app->request->post()['Book']['authors'] as $author){
-            //         $book->link('authors',Author::findOne($author));
-            //     }
-            // }
             Yii::$app->session->setFlash('success',Yii::t('backend', 'Book has been created'));
             return $this->redirect(['book/index']);
         }
@@ -180,16 +190,6 @@ class BookController extends Controller{
                 echo \yii\helpers\Json::encode($response);
             }
 
-            // //move file from temp folder to uploads
-            // if($file->saveAs($uploadPath.'/'.$fileName)){
-                
-            //     echo \yii\helpers\Json::encode($file);
-            // }
-            // if ($file->saveAs($uploadPath . '/' . $file->name)) {
-            //     //Now save file data to database
-
-            //     echo \yii\helpers\Json::encode($file);
-            // }
         }
     }
 }

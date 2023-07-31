@@ -7,7 +7,7 @@ $this->title = Yii::t('backend','My Application');
 <div class="site-index">
 
     <div class="jumbotron text-center bg-transparent">
-        <h1 class="display-4"><?=Yii::t('backend','Welcome to admin panel')?></h1>
+        <h1 class="display-4"><?=Yii::t('backend','Welcome to book catalog')?></h1>
     </div>
 
     <div class="body-content">

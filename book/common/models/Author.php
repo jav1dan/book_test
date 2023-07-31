@@ -46,6 +46,12 @@ class Author extends ActiveRecord
             ->viaTable('book_author',['author_id'=>'id'])
             ->orderBy('name');
     }
+
+    public function getSubscribers(){
+        return $this->hasMany(Subscriber::class,['id'=>'subscriber_id'])
+            ->viaTable('subscriber_author',['author_id'=>'id'])
+            ->orderBy('name');
+    }
     /**
      * {@inheritdoc}
      */
