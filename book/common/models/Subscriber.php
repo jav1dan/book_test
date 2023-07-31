@@ -15,18 +15,31 @@ use common\models\Author;
     * @property name $name
 */
 class Subscriber extends ActiveRecord{
+    public static function primaryKey(){
+        return array('id');
+    }
+
+    public function behaviors(){
+        return [
+            TimestampBehavior::class,
+        ];
+    }
+    public function getAuthors(){
+        return $this->hasMany(Author::class,['id'=>'author_id'])
+            ->viaTable('subscriber_author',['subscriber_id'=>'id'])
+            ->orderBy('name');
+    }
+
+
     public static function tableName(){
         return 'subscriber';
     }
     public function rules(){
         return [
-            [['phone'],'required'],
-            [['phone'],'phone'],
-            [['phone'],'unique'],
-            [['name'],'string','max'=>255],
-            [['name'],'trim'],
-            [['name'],'match','pattern'=>'/^[a-zA-Zа-яА-Я]+$/u','message'=>'Only letters allowed'],
-            [['name'],'match','pattern'=>'/^[a-zA-Zа-яА-Я]{2,}$/u','message'=>'Minimum 2 letters'],
+            [['phone','name'],'required'],
+            [['phone','name'],'string'],
+            // [['phone'],'unique'],
+
         ];
     }
     public function attributeLabels(){

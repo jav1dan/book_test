@@ -6,6 +6,7 @@ use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use common\models\Author;
 use yii\imagine\Image;
+use yii\helpers\ArrayHelper;
 
  /**
   * This is the model class for table "book".
@@ -104,5 +105,17 @@ class Book extends ActiveRecord
             'updated_at' => Yii::t('app', 'Updated At'),
             'authors'=>Yii::t('app', 'Book Authors')    
         ];
+    }
+
+    public function notify(){
+        $authors = $this->getAuthors()->all();
+        $this->authors = ArrayHelper::getColumn($authors,'id');
+        foreach($this->authors as $authorId){
+            $author = Author::findOne($authorId);
+            $subscribers = $author->getSubscribers()->all();
+            foreach($subscribers as $subscriber){
+                Yii::$app->sms->send($subscriber->phone,'Новая книга от автора '.$author->name);
+            }
+        }
     }
 }

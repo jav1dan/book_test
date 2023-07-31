@@ -42,6 +42,20 @@ $this->params['breadcrumbs'][]=$this->title;
                         </td>
                     </tr>
                 <?php endforeach;?>
+                <?php if(!Yii::$app->user->isGuest): ?>
+                    <tr>
+                        <td colspan="2"><strong><?=Yii::t('backend','Subscribers')?></strong></td>
+                    </tr>
+                    <?php foreach($model->subscribers as $subscriber):?>
+                        <tr>
+                            <td><?=$subscriber->name?></td>
+                            <td><?=$subscriber->phone?></td>
+                            <td>
+                                <a href="<?= \yii\helpers\Url::to(['author/unsubscribe', 'id' => $subscriber->id,'author_id'=>$model->id]) ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    <?php endforeach;?>
+                <?php endif; ?>
             </tbody>
         </table>
     </div>

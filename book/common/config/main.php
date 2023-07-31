@@ -11,6 +11,9 @@ return [
         'cache' => [
             'class' => \yii\caching\FileCache::class,
         ],
+        'sms'=>[
+            'class'=>\common\components\SmsComponent::class,
+        ],
         'i18n'=>[
             'translations'=>[
                 'frontend*' => [

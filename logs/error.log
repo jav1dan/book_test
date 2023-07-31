@@ -456,3 +456,29 @@ Previous exception:
 yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/AuthorController.php on line 116. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
 Stack trace:
 #0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/R" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /author/subscribe?id=2 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/author/view?id=2"
+2023/07/31 05:47:17 [error] 2516934#0: *10534 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/common/models/Book.php on line 113. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+Error: Class 'common\components\Yii' not found in /var/www/book.javidan.ru/book/common/components/SmsComponent.php:12
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/BaseObject.php(109): common\components\SmsComponent->init()
+#1 [internal function]: yii\base\BaseObject->__construct()" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "POST /book/create HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/book/create"
+2023/07/31 05:47:35 [error] 2516934#0: *10544 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/common/models/Book.php on line 116. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+Error: Class 'common\components\Yii' not found in /var/www/book.javidan.ru/book/common/components/SmsComponent.php:12
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/BaseObject.php(109): common\components\SmsComponent->init()
+#1 [internal function]: yii\base\BaseObject->__construct()" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "POST /book/create HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/book/create"

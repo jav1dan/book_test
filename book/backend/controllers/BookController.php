@@ -123,6 +123,7 @@ class BookController extends Controller{
         $book = new Book();
         if($book->load(Yii::$app->request->post()) && $book->save()){
             Yii::$app->session->setFlash('success',Yii::t('backend', 'Book has been created'));
+            $book->notify();
             return $this->redirect(['book/index']);
         }
         $templateData = [

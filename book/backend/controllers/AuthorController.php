@@ -23,7 +23,7 @@ class AuthorController extends Controller{
                         'allow'=>true,
                     ],
                     [
-                        'actions'=>['create','update','delete'],
+                        'actions'=>['create','update','delete','unsubscribe'],
                         'allow'=>true,
                         'roles'=>['@'],
                     ],
@@ -99,27 +99,60 @@ class AuthorController extends Controller{
     }
 
     public function actionSubscribe($id){
-        $author = Author::findOne($id);
+        $author = Author::findOne($id);        
+        $subscriber = new Subscriber();
         if(!$author){
             Yii::$app->session->setFlash('error',Yii::t('backend','Author not found'));
             return $this->redirect(['author/index']);
         }
-        $subscriber = new Subscriber();
-        if($subscriber->load(Yii::$app->request->post()) && $subscriber->save()){
+        if($subscriber->load(Yii::$app->request->post())){
+            
             //check if subscriber with this number already exists
-            if($author->getSubscribers()->where(['phone'=>$subscriber->phone])->exists()){
-                Yii::$app->session->setFlash('error',Yii::t('backend','Subscriber already exists'));
+            //Check if there any Subscriber with this phone number
+            if(Subscriber::find()->where(['phone'=>$subscriber->phone])->exists() == true){
+                $subscriber = Subscriber::find()->where(['phone'=>$subscriber->phone])->one();
+                $subscriber->save();
+                //check if subscriber is already subscribed to this author
+                if($author->getSubscribers()->where(['id'=>$subscriber->id])->exists() == true){
+                    Yii::$app->session->setFlash('error',Yii::t('backend','Subscriber already subscribed to this author'));
+                    return $this->redirect(['author/index']);
+                }
+                $author->link('subscribers',$subscriber);
+                Yii::$app->session->setFlash('success',Yii::t('backend', 'Subscriber has been created'));
                 return $this->redirect(['author/index']);
             }
+            
+            $subscriber->save();
             $author->link('subscribers',$subscriber);
             Yii::$app->session->setFlash('success',Yii::t('backend', 'Subscriber has been created'));
             return $this->redirect(['author/index']);
-        }
+        } 
+
         $templateData = [
             'model'=>$subscriber,
             'author'=>$author,
         ];
         // var_dump($templateData);
         return $this->render('subscribe',$templateData);
+    }
+
+
+    public function actionUnsubscribe($id,$author_id){
+        $subscriber = Subscriber::findOne($id);
+        if(!$subscriber){
+            Yii::$app->session->setFlash('error',Yii::t('backend','Subscriber not found'));
+            return $this->redirect(['author/index']);
+        }
+        //unlink subscriber from author
+        $author = $subscriber->getAuthors()->where(['id'=>$author_id])->one();
+        $author->unlink('subscribers',$subscriber,true);
+
+        //check if subscriber has any other authors
+        if($subscriber->getAuthors()->exists() == false){
+            $subscriber->delete();
+            Yii::$app->session->setFlash('success',Yii::t('backend', 'Subscriber has been deleted'));
+            return $this->redirect(['author/index']);
+        }
+        Yii::$app->session->setFlash('success',Yii::t('backend', 'Subscriber has been deleted'));
     }
 }
