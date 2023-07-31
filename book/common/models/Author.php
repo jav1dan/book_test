@@ -27,6 +27,7 @@ class Author extends ActiveRecord
         return array('id');
     }
 
+    public $booksCount;
     /**
      * {@inheritdoc}
      */

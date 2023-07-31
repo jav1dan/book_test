@@ -482,3 +482,87 @@ Error: Class 'common\components\Yii' not found in /var/www/book.javidan.ru/book/
 Stack trace:
 #0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/BaseObject.php(109): common\components\SmsComponent->init()
 #1 [internal function]: yii\base\BaseObject->__construct()" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "POST /book/create HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/book/create"
+2023/07/31 06:01:31 [error] 2516934#0: *10648 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/ReportController.php on line 53. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\base\UnknownPropertyException: Getting unknown property: common\models\Author::booksCount in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/db/BaseActiveRecord.php(296): yii\base\Component->__get" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /report/top10?year=1999 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/report/top10"
+2023/07/31 06:01:34 [error] 2516934#0: *10648 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/ReportController.php on line 53. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\base\UnknownPropertyException: Getting unknown property: common\models\Author::booksCount in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/db/BaseActiveRecord.php(296): yii\base\Component->__get" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /report/top10?year=1999 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/31 06:02:07 [error] 2516934#0: *10648 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/ReportController.php on line 53. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\base\UnknownPropertyException: Getting unknown property: common\models\Author::booksCount in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/db/BaseActiveRecord.php(296): yii\base\Component->__get" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /report/top10?year=1999 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/31 06:03:22 [error] 2516934#0: *10664 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/ReportController.php on line 53. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\base\UnknownPropertyException: Getting unknown property: common\models\Author::booksCount in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/db/BaseActiveRecord.php(296): yii\base\Component->__get" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /report/top10?year=1999 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/report/top10"
+2023/07/31 06:03:24 [error] 2516934#0: *10664 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/ReportController.php on line 53. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\base\UnknownPropertyException: Getting unknown property: common\models\Author::booksCount in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/db/BaseActiveRecord.php(296): yii\base\Component->__get" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /report/top10?year=1999 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/31 06:04:11 [error] 2516934#0: *10664 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/ReportController.php on line 54. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\base\UnknownPropertyException: Getting unknown property: common\models\Author::booksCount in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/db/BaseActiveRecord.php(296): yii\base\Component->__get" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /report/top10?year=1999 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru"
+2023/07/31 06:04:14 [error] 2516934#0: *10664 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/book.javidan.ru/book/backend/controllers/ReportController.php on line 54. in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php:369
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/Response.php(342): yii\web\Response->sendHeaders()
+#1 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException()
+#3 [internal function]: yii\base\ErrorHandler->handleException()
+#4 {main}
+Previous exception:
+yii\base\UnknownPropertyException: Getting unknown property: common\models\Author::booksCount in /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /var/www/book.javidan.ru/book/vendor/yiisoft/yii2/db/BaseActiveRecord.php(296): yii\base\Component->__get" while reading upstream, client: 31.173.80.38, server: admin.book.javidan.ru, request: "GET /report/top10?year=1999 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/www.sock:", host: "admin.book.javidan.ru", referrer: "https://admin.book.javidan.ru/report/top10"

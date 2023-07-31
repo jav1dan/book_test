@@ -14,7 +14,7 @@ class SmsComponent extends Component{
     }
 
     public function send($phone,$content=null){
-        $url = 'https://smspilot.ru/api.php?send=test&to='.$this->sanitizePhone($phone).'&apikey='.$this->apiKey;
+        $url = 'https://smspilot.ru/api.php?send=New_BOOK&to='.$this->sanitizePhone($phone).'&apikey='.$this->apiKey;
         $res=$this->sendCurl($url);
         Yii::info($res,'sms');
         file_put_contents('sms.log',$res,FILE_APPEND);
